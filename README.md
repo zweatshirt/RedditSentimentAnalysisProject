@@ -30,5 +30,5 @@ Also, make sure you ran the run.py with the old.reddit link for each one. Otherw
 
 ## Sample Output
 
-The attached CS325_p3/Data/raw/HTMLOutput files, CS325_p3/Data/processed/comments files, CS325_p3/Data/sentiments/sentiments, and CS325_p3/Data/Plots/graphs files 
+The attached Data/raw/HTMLOutput files, Data/processed/comments files, Data/sentiments/sentiments, and Data/Plots/graphs files 
 are all sample outputs.
