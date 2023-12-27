@@ -1,4 +1,7 @@
-# Project 6 created by Alex Wernex and Zachery Linscott
+# Reddit Comments Sentiment Analysis 
+
+## Authors: Alex Wernex and Zachery Linscott
+
 This is a program to download the HTML pages of multiple URLs pointing to Reddit posts.
 Each URL is read from a file that the user of the program provides a path to.
 
