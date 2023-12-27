@@ -28,10 +28,6 @@ Don't worry, all of the graphs will still be in the plots folder as pictures.
 
 Also, make sure you ran the run.py with the old.reddit link for each one. Otherwise the comments will not be in the file and it won't work.
 
-For the TA: There is no API key to download or API to worry about. We did not use OpenAI or Bard due to a myriad of issues,
-including the slowness of API calls. We used the textblob library for this project which is far more lightweight.
-I reached out to the professor and he said this is ok.
-
 ## Sample Output
 
 The attached CS325_p3/Data/raw/HTMLOutput files, CS325_p3/Data/processed/comments files, CS325_p3/Data/sentiments/sentiments, and CS325_p3/Data/Plots/graphs files 
