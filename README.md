@@ -22,8 +22,7 @@ the plots folder as well, located in Data.
 
 2. Make sure to download the environment from requirements.yaml to make sure you have the appropriate libraries.
 
-3. Run in the terminal using python passing the file of urls you wish to gather comments from
-4. as an argument, e.g.: `python run.py yourfilepath/yourfilename`
+3. Run in the terminal using python passing the file of urls you wish to gather comments from as an argument, e.g.: `python run.py yourfilepath/yourfilename`
 5. Finally when you are finished viewing the graphs, exit out of all of the windows to end the program.
 Don't worry, all of the graphs will still be in the plots folder as pictures. 
 
