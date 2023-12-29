@@ -1,3 +1,4 @@
+import random
 import subprocess
 import sys
 from random import choice
@@ -35,15 +36,16 @@ Purpose:
 
 
 def csv_to_df(file_name: str, n_lines) -> DataFrame:
-    df = read_csv(file_name, nrows=n_lines, sep='\t', header=None, names=['sentiments'])
+    df = read_csv(file_name, nrows=n_lines, sep='\t', header=None, names=['sentiments'], index_col=False)
     df['sentiment_count'] = df.groupby('sentiments')['sentiments'].transform('count')
     df.drop_duplicates(inplace=True)
+    df = df.reset_index(drop=True)
+    df = df.sort_values(by='sentiments', ascending=False)
     return df
 
 
 def plot_sentiments(df: DataFrame, postTitle, fig_num, saveLoc) -> None:
     colors = ['green', 'gray', 'red']
-    color = []
 
     print("Plotting figure {} for {}\n".format(fig_num, postTitle))
     plt.figure(postTitle)
