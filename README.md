@@ -7,11 +7,10 @@ Each URL is read from a file that the user of the program provides a path to.
 
 The raw HTML of each URL is then put into separate files.
 
-From there the HTML to extract the comments from the subreddit.
+From there the HTML to extract the comments from the subreddit.  
 
-Once each all the html is cleaned, the comments from each url are scrubbed from the html  
-then stored cleanly into yet more files 
-which are unique to each Reddit post.
+Once each all the html is cleaned,   the comments from each url are scrubbed from the html  
+then stored cleanly into yet more files which are unique to each Reddit post.
 
 Next, the comments files are scanned and sentiment analysis is performed on each comment.
 Once the sentiments are gathered, they are also put into their own files,  
