@@ -5,10 +5,11 @@
 This is a program to download the HTML pages of multiple URLs pointing to Reddit posts.
 Each URL is read from a file that the user of the program provides a path to.
 
-The raw HTML of each URL is then put into separate files, then from there each file
-is cleaned of the HTML to extract the comments from the subreddit.
+The raw HTML of each URL is then put into separate files.
 
-Once each file is cleaned, these comments are then stored cleanly into yet more files 
+From there the HTML to extract the comments from the subreddit.
+
+Once each all the html is cleaned, the comments from each url are scrubbed from the html then stored cleanly into yet more files 
 which are unique to each Reddit post.
 
 Next, the comments files are scanned and sentiment analysis is performed on each comment.
@@ -26,6 +27,7 @@ the plots folder as well, located in Data.
 2. Make sure to download the environment from requirements.yaml to make sure you have the appropriate libraries.
 
 3. Run in the terminal using python passing the file of urls you wish to gather comments from as an argument, e.g.: `python run.py yourfilepath/yourfilename`
+   
 5. Finally when you are finished viewing the graphs, exit out of all of the windows to end the program.
 Don't worry, all of the graphs will still be in the plots folder as pictures. 
 
