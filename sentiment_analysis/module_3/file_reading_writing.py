@@ -17,16 +17,13 @@ Purpose:
 
 
 
-def output_comments(data, toFile):
+def output_comments(data, to_file):
     page_break = f"\n"
-    output = open(toFile, "w", encoding="utf8")
-    counter = 0
+    output = open(to_file, "w", encoding="utf8")
     for line in data:
         output.write(line.replace("\n", " "))
         output.write(page_break)
-        counter += 1
-        if counter == 50:
-            break
+
     output.close()
 
 

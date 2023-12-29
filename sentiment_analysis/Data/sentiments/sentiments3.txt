@@ -48,3 +48,10 @@ neutral
 negative
 positive
 neutral
+positive
+neutral
+neutral
+neutral
+positive
+positive
+neutral

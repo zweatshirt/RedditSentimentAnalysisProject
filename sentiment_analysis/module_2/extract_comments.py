@@ -24,15 +24,19 @@ Purpose:
 '''
 
 
-def extract_comments(filename):
-    html_file = open(filename, encoding='utf8')
+def extract_comments(h: str, file=False):
+    if file:
+        html_file = open(h, encoding='utf8')
+        html = BeautifulSoup(html_file, 'html.parser')
+    else:
+        html = BeautifulSoup(h, 'html.parser')
     output = []
-    html = BeautifulSoup(html_file, 'html.parser')
-
     comment_html = html.find_all(class_="entry unvoted")
 
-    for elem in comment_html:
-        comments = html.find('body').find_all("div", class_='md')
-        for comment in comments:
-            output.append(comment.text)
+    # for elem in comment_html:
+    comments = html.find('body').find_all("div", class_='md')
+    for comment in comments:
+        output.append(comment.text)
     return output
+
+

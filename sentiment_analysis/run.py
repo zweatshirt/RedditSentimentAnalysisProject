@@ -11,7 +11,7 @@ Authors: Zachery Linscott and Alex Wernex
 Purpose:
     run.py                                                                            
     This is the driver for the project.                                               
-    It runs in the terminal with the url                                              
+    It runs in the terminal with the file of urls                                            
     to process as an argument.                                                        
     First, it takes the names of the files you set                                    
     and creates the paths to the correct folders on your system.                      
@@ -51,31 +51,33 @@ def main():
         post_title = url.split("/")[-2].replace("_", " ")
 
         # save the raw data to a file
-        save_raw_file(url, raw_file_name)
+        raw = save_raw_file(url, raw_file_name)
         print("HTML raw data saved to file {}!".format(raw_file_name))
 
         # extract cleaned comments from raw data
-        comments = extract_comments(raw_file_name)
+        comments = extract_comments(raw)
         print("Comments extracted!")
 
         # save the comments to a file
-        output_comments(comments, processed_file_name)
+        # output_comments(comments, processed_file_name)
         print("Comments saved to file {}!".format(processed_file_name))
 
+        # not necessary
         # grab processed/cleaned comments from comments.txt
-        comment_lst: [] = extract_file_lines(processed_file_name)
+        # comment_lst: [] = extract_file_lines(processed_file_name)
+        comments_lst: [] = [c.strip() for c in comments]
 
         # analyze comment sentiments individually and store them in a list
         print("Analyzing the sentiment of each comment...")
-        sentiments = [comment_sentiment(comment) for comment in comment_lst]
+        sentiments = [comment_sentiment(comment) for comment in comments_lst]
 
         # fist argument is the file name
         print("Comments and the sentiment of each comment saved in CSV format in {}!".format(sentiment_file_name))
-        sentiments_file_write(sentiment_file_name, comment_lst, sentiments)
+        sentiments_file_write(sentiment_file_name, comments, sentiments)
 
         # read sentiment file and convert to df
         # would be faster to just read from the sentiments list but whatever.
-        sentiments_df = csv_to_df(sentiment_file_name, n_lines := 50)
+        sentiments_df = csv_to_df(sentiment_file_name)
         plot_sentiments(sentiments_df, post_title, fig_num=counter, saveLoc=graph_file_name)
         counter += 1
 

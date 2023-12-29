@@ -14,7 +14,15 @@ def save_raw_file(url, filename):
     try:
         if 'www.' in url:
             url = url.replace('www.', 'old.')
-        urllib.request.urlretrieve(url, filename)
+        fp = urllib.request.urlopen(url)
+        mybytes = fp.read()
+
+        mystr = mybytes.decode("utf8")
+        fp.close()
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(mystr)
+
+        return mystr
     except urllib.error.URLError:
         print(urllib.error.URLError)
         print("If you are getting an SSL Certificate verify failed error,"
