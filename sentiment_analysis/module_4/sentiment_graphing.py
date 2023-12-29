@@ -1,6 +1,28 @@
-from pandas import read_csv, DataFrame
-import matplotlib.pyplot as plt
+import subprocess
+import sys
 from random import choice
+
+def install_pd():
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'pandas'])
+
+
+def install_pltl():
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'matplotlib'])
+
+try:
+    from pandas import DataFrame, read_csv
+
+except:
+    install_pd()
+    from pandas import DataFrame, read_csv
+
+try:
+    import matplotlib.pyplot as plt
+
+except:
+    install_pltl()
+    import matplotlib.pyplot as plt
+
 
 '''
 Authors: Zachery Linscott and Alex Wernex
@@ -11,6 +33,7 @@ Purpose:
         Plots a bar chart of the positive, neutral and negative sentiments counts.
 '''
 
+
 def csv_to_df(file_name: str, n_lines) -> DataFrame:
     df = read_csv(file_name, nrows=n_lines, sep='\t', header=None, names=['sentiments'])
     df['sentiment_count'] = df.groupby('sentiments')['sentiments'].transform('count')
@@ -20,7 +43,7 @@ def csv_to_df(file_name: str, n_lines) -> DataFrame:
 
 def plot_sentiments(df: DataFrame, postTitle, fig_num, saveLoc) -> None:
     colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple',
-          'pink', 'brown', 'black', 'gray', 'cyan']
+              'pink', 'brown', 'black', 'gray', 'cyan']
     color = []
     for i in range(3):
         color.append(choice(colors))

@@ -1,9 +1,0 @@
-beautifulsoup4==4.12.2
-bs4==0.0.1
-cffi==1.15.1
-pycparser==2.21
-Pygments @ file:///private/tmp/pygments-20230630-5700-1ipog2m/Pygments-2.15.1
-PyYAML @ file:///private/tmp/pyyaml-20230718-6369-a6l507/PyYAML-6.0.1
-six==1.16.0
-soupsieve==2.5
-typing_extensions @ file:///private/tmp/python-typing-extensions-20230702-5665-1x5t5pn/typing_extensions-4.7.1/dist/typing_extensions-4.7.1-py3-none-any.whl

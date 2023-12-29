@@ -1,4 +1,18 @@
-from textblob import TextBlob
+import subprocess
+import sys
+
+
+def install_tb():
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'textblob'])
+
+
+try:
+    from textblob import TextBlob
+
+except:
+    install_tb()
+    from textblob import TextBlob
+
 '''
 Authors: Zachery Linscott and Alex Wernex
 Purpose:
@@ -22,6 +36,3 @@ def comment_sentiment(comment) -> str:
         return 'negative'
     else:
         return 'neutral'
-
-
-
