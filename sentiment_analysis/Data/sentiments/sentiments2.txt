@@ -1,4 +1,5 @@
 positive
+positive
 neutral
 neutral
 neutral
@@ -44,7 +45,6 @@ positive
 positive
 negative
 positive
-neutral
 neutral
 neutral
 neutral

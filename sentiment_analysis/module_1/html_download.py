@@ -12,6 +12,8 @@ import urllib.error
 
 def save_raw_file(url, filename):
     try:
+        if 'www.' in url:
+            url = url.replace('www.', 'old.')
         urllib.request.urlretrieve(url, filename)
     except urllib.error.URLError:
         print(urllib.error.URLError)

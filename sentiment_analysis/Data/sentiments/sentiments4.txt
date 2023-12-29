@@ -1,3 +1,4 @@
+positive
 negative
 positive
 positive
@@ -12,14 +13,14 @@ positive
 positive
 positive
 positive
-positive
-neutral
-negative
-negative
 positive
 neutral
 negative
 negative
+positive
+neutral
+negative
+negative
 neutral
 positive
 positive
@@ -47,4 +48,3 @@ positive
 negative
 positive
 positive
-neutral

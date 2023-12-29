@@ -32,7 +32,7 @@ def extract_comments(filename):
     comment_html = html.find_all(class_="entry unvoted")
 
     for elem in comment_html:
-        comments = elem.find_all(class_='md')
+        comments = html.find('body').find_all("div", class_='md')
         for comment in comments:
             output.append(comment.text)
     return output
