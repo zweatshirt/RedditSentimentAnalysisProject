@@ -44,17 +44,17 @@ def csv_to_df(file_name: str) -> DataFrame:
     return df
 
 
-def plot_sentiments(df: DataFrame, postTitle, fig_num, saveLoc) -> None:
+def plot_sentiments(df: DataFrame, post_title, fig_num, save_loc) -> None:
     colors = ['green', 'gray', 'red']
-    print("Plotting figure {} for {}\n".format(fig_num, postTitle))
+    print("Plotting figure {} for {}\n".format(fig_num, post_title))
 
-    plt.figure(postTitle)
+    plt.figure(post_title)
     plt.bar(df['sentiments'], df['sentiment_count'], color=colors, label=df['sentiments'])
 
     plt.xlabel(list(df)[0])
     plt.ylabel('Quantity of Sentiment')
 
-    plt.title("{} sentiments".format(postTitle))
+    plt.title("{} sentiments".format(post_title))
     plt.legend(title="Sentiments")
 
-    plt.savefig(saveLoc)
+    plt.savefig(save_loc)

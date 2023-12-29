@@ -78,7 +78,7 @@ def main():
         # read sentiment file and convert to df
         # would be faster to just read from the sentiments list but whatever.
         sentiments_df = csv_to_df(sentiment_file_name)
-        plot_sentiments(sentiments_df, post_title, fig_num=counter, saveLoc=graph_file_name)
+        plot_sentiments(sentiments_df, post_title, fig_num=counter, save_loc=graph_file_name)
         counter += 1
 
     plt.show()
