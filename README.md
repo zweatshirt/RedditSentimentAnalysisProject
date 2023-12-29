@@ -13,8 +13,7 @@ Once each all the html is cleaned,   the comments from each url are scrubbed fro
 then stored cleanly into yet more files which are unique to each Reddit post.
 
 Next, the comments files are scanned and sentiment analysis is performed on each comment.
-Once the sentiments are gathered, they are also put into their own files,  
-again unique for each
+Once the sentiments are gathered,   they are also put into their own files, again unique for each
 Reddit post.
 
 Finally, each sentiment file is then put into its own bar graph  
