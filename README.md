@@ -28,8 +28,6 @@ This is a program to download the HTML pages of multiple URLs pointing to Reddit
 5. Finally when you are finished viewing the graphs, exit out of all of the windows to end the program.
 Don't worry, all of the graphs will still be in the plots folder as pictures. 
 
-Also, make sure you ran the run.py with the old.reddit link for each one. Otherwise the comments will not be in the file and it won't work.
-
 ## Sample Output
 
 The attached Data/raw/HTMLOutput files, Data/processed/comments files, Data/sentiments/sentiments, and Data/Plots/graphs files 
