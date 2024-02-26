@@ -1,7 +1,15 @@
-import random
+"""
+Authors: Zachery Linscott and Alex Wernex
+Purpose:
+    csv_to_df():
+        Converts a csv of Reddit comments with their sentiments into a dataframe.
+    plot_sentiments():
+        Plots a bar chart of the positive, neutral and negative sentiments counts.
+"""
+
 import subprocess
 import sys
-from random import choice
+
 
 def install_pd():
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'pandas'])
@@ -12,27 +20,15 @@ def install_pltl():
 
 try:
     from pandas import DataFrame, read_csv
-
 except:
     install_pd()
     from pandas import DataFrame, read_csv
 
 try:
     import matplotlib.pyplot as plt
-
 except:
     install_pltl()
     import matplotlib.pyplot as plt
-
-
-'''
-Authors: Zachery Linscott and Alex Wernex
-Purpose:
-    csv_to_df():
-        Converts a the csv of Reddit comments with their sentiments into a dataframe.
-    plot_sentiments():
-        Plots a bar chart of the positive, neutral and negative sentiments counts.
-'''
 
 
 def csv_to_df(file_name: str) -> DataFrame:

@@ -1,3 +1,17 @@
+"""
+Authors: Zachery Linscott and Alex Wernex
+Purpose:
+    run.py
+    This is the driver for the project.
+    It runs in the terminal with the file of urls
+    to process as an argument.
+    First, it takes the names of the files you set
+    and creates the paths to the correct folders on your system.
+    Then, it takes the URL from arg and passes to the three modules
+    to save the post as a raw HTML file, extract the comments as
+    data, and finally, saves those comments to a file.
+"""
+
 import os
 from module_1.arg_parsing import arg_grabber
 from module_1.html_download import save_raw_file
@@ -5,20 +19,6 @@ from module_2.extract_comments import *
 from module_3.file_reading_writing import *
 from module_4.comment_polarity import comment_sentiment
 from module_4.sentiment_graphing import *
-
-'''
-Authors: Zachery Linscott and Alex Wernex
-Purpose:
-    run.py                                                                            
-    This is the driver for the project.                                               
-    It runs in the terminal with the file of urls                                            
-    to process as an argument.                                                        
-    First, it takes the names of the files you set                                    
-    and creates the paths to the correct folders on your system.                      
-    Then, it takes the URL from arg and passes to the three modules                   
-    to save the post as a raw HTML file, extract the comments as                      
-    data, and finally, saves those comments to a file.      
-'''
 
 
 def main():

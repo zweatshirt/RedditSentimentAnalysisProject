@@ -1,3 +1,13 @@
+'''
+Authors: Alex Wernex and Zachery Linscott
+Purpose:
+    extract_comments.py
+    This file simply takes the filepath of the raw HTML file
+    and outputs a list of the comments form the post. This function opens the file,
+    parses through the file with BeautifulSoup looking for a class id associated with
+    comments. Then it extracts just the text from the post and returns it as a list.
+'''
+
 import subprocess
 import sys
 
@@ -8,20 +18,9 @@ def install_bs4():
 
 try:
     from bs4 import BeautifulSoup
-
 except:
     install_bs4()
     from bs4 import BeautifulSoup
-
-'''
-Authors: Alex Wernex and Zachery Linscott
-Purpose:
-    extract_comments.py
-    This file simply takes the filepath of the raw HTML file
-    and outputs a list of the comments form the post. This function opens the file,
-    parses through the file with BeautifulSoup looking for a class id associated with
-    comments. Then it extracts just the text from the post and returns it as a list.
-'''
 
 
 def extract_comments(h: str, file=False):

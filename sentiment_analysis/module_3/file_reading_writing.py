@@ -1,4 +1,4 @@
-'''
+"""
 Authors: Alex Wernex and Zachery Linscott
 Purpose:
     file_reading_writing.py
@@ -13,8 +13,7 @@ Purpose:
     sentiments_file_write(): takes a file name, a list of reddit comments,
     and a list of the comments' sentiments, writing them to the file
     with the given name in CSV format.
-'''
-
+"""
 
 
 def output_comments(data, to_file):
